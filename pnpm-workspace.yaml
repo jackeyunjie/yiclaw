@@ -1,0 +1,10 @@
+# pnpm 工作区配置
+# 定义 monorepo 的包目录
+
+packages:
+  # 应用程序
+  - 'apps/*'
+  # 共享包
+  - 'packages/*'
+  # 插件
+  - 'plugins/**/*'

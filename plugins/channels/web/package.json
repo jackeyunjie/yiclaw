@@ -1,0 +1,28 @@
+{
+  "name": "@openclaw/plugin-web-channel",
+  "version": "1.0.0",
+  "description": "Web chat channel plugin for OpenClaw",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openclaw/plugin-sdk": "workspace:*",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "channel",
+    "web"
+  ],
+  "author": "OpenClaw Team",
+  "license": "MIT"
+}

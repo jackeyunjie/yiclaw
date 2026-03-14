@@ -1,0 +1,29 @@
+{
+  "name": "@openclaw/ai-sdk",
+  "version": "1.0.0",
+  "description": "AI 模型 SDK 封装 - 统一多模型提供商接口",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@openclaw/shared": "workspace:*",
+    "openai": "^4.52.0",
+    "@anthropic-ai/sdk": "^0.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}

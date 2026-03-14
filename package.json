@@ -1,0 +1,52 @@
+{
+  "name": "openclaw",
+  "version": "1.0.0",
+  "description": "OpenClaw 个人 AI 助手 - 多通道智能对话系统",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --filter gateway dev",
+    "dev:web": "pnpm --filter web dev",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r clean && rm -rf node_modules",
+    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio",
+    "db:seed": "tsx apps/gateway/src/scripts/seed.ts",
+    "db:push": "prisma db push"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "chatbot",
+    "openai",
+    "claude",
+    "wechat",
+    "telegram"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.29.2",
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "husky": "^9.1.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.3.0",
+    "prisma": "^5.22.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.5.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0"
+  }
+}

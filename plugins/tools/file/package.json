@@ -1,0 +1,27 @@
+{
+  "name": "@openclaw/plugin-tool-file",
+  "version": "1.0.0",
+  "description": "File operations tool plugin for OpenClaw",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openclaw/plugin-sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "tool",
+    "file"
+  ],
+  "author": "OpenClaw Team",
+  "license": "MIT"
+}

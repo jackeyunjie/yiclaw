@@ -1,0 +1,39 @@
+{
+  "name": "@openclaw/plugin-sdk",
+  "version": "1.0.0",
+  "description": "OpenClaw Plugin SDK - Core interfaces for building plugins",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "sdk",
+    "ai",
+    "agent"
+  ],
+  "author": "OpenClaw Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.3",
+    "glob": "^10.3.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}

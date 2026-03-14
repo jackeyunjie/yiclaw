@@ -1,0 +1,28 @@
+{
+  "name": "@openclaw/plugin-memory-database",
+  "version": "1.0.0",
+  "description": "Database memory storage plugin for OpenClaw",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openclaw/plugin-sdk": "workspace:*",
+    "@prisma/client": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "memory",
+    "database"
+  ],
+  "author": "OpenClaw Team",
+  "license": "MIT"
+}
