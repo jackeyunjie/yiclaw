@@ -1,0 +1,31 @@
+{
+  "name": "@openclaw/plugin-wechat-channel",
+  "version": "1.0.0",
+  "description": "WeChat personal account channel plugin for OpenClaw",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openclaw/plugin-sdk": "workspace:*",
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-wechat4u": "^1.14.14"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "channel",
+    "wechat",
+    "weixin"
+  ],
+  "author": "OpenClaw Team",
+  "license": "MIT"
+}

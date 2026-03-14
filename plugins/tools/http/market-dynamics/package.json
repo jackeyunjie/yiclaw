@@ -1,0 +1,35 @@
+{
+  "name": "@openclaw/plugin-market-dynamics",
+  "version": "1.0.0",
+  "description": "行业动态数据抓取插件 - 提供宏观与行业动态数据的 HTTP 抓取能力",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --test dist/**/*.test.js",
+    "lint": "eslint src/**/*.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "openclaw",
+    "plugin",
+    "market",
+    "finance",
+    "industry",
+    "news"
+  ],
+  "author": "OpenClaw Team",
+  "license": "MIT",
+  "dependencies": {
+    "@openclaw/plugin-sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
+  "peerDependencies": {
+    "@openclaw/plugin-sdk": "^1.0.0"
+  }
+}
