@@ -23,6 +23,7 @@ import agentsRoutes from '../routes/agents';
 import memoryRoutes from '../routes/memory';
 import messagingRoutes from '../routes/messaging';
 import databaseRoutes from '../routes/database';
+import aiEmployeesRoutes from '../routes/ai-employees';
 import { cronScheduler } from '../services/scheduler/CronScheduler';
 
 // 加载环境变量
@@ -50,7 +51,7 @@ export async function createServer(): Promise<{ app: express.Application; httpSe
   setupMiddleware(app);
 
   // 配置路由
-  setupRoutes(app);
+  await setupRoutes(app);
 
   // 配置 Socket.io
   setupSocketIO(io);
@@ -124,7 +125,7 @@ function setupMiddleware(app: express.Application): void {
 /**
  * 配置路由
  */
-function setupRoutes(app: express.Application): void {
+async function setupRoutes(app: express.Application): Promise<void> {
   // 健康检查
   app.get('/health', (_req, res) => {
     res.json({
@@ -148,11 +149,12 @@ function setupRoutes(app: express.Application): void {
   app.use('/api/v1/memory', memoryRoutes);
   app.use('/api/v1/messaging', messagingRoutes);
   app.use('/api/v1/database', databaseRoutes);
+  app.use('/api/v1/ai-employees', aiEmployeesRoutes);
   // app.use('/api/v1/model-configs', modelConfigRoutes);
   // app.use('/api/v1/tools', toolRoutes);
 
-  // 启动定时任务调度器
-  cronScheduler.start();
+  // 启动定时任务调度器（从数据库恢复任务）
+  await cronScheduler.start();
   logger.info('定时任务调度器已启动');
 
   // 404 处理
